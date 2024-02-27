@@ -84,7 +84,6 @@ function getFormInformation() {
   list.classList.remove("list-active");
   arrayMarkerClick[0].dragging._draggable._enabled = false;
   arrayMarkerClick = [];
-console.log("");
   //Id  accountant
   const select = document.getElementById("workOptions-input");
   const selectOption = select.options[select.selectedIndex].value;
