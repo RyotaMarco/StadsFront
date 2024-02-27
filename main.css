@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.leaflet-geosearch-bar form {
+  position: relative;
+}
+.reset {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 5px;
+  cursor: pointer;
+  border: none;
+  height: 30px;
+  width: 25px;
+  background-color: white;
+}
+.reset:hover {
+  background-color: #f4f4f4;
+}
+
+.list {
+  display: none;
+  position: absolute;
+  width: 20vh;
+  height: 40vh;
+  right: 45vh;
+  top: 20%;
+  line-height: 22px;
+  padding: 10px;
+}
+.list-active {
+  background-color: transparent;
+  display: flex;
+  background-color: #060024;
+  align-items: center;
+}
+.custom-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 5px 5px;
+  cursor: pointer;
+  width: 40px;
+}
+
+.custom-button img {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+
+#map {
+  width: 60vh;
+  height: 60vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.formular {
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+#observation-input {
+  margin-bottom: 10px;
+  width: 97%;
+  height: 60px;
+  resize: none;
+  padding: 2px;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#workOptions-input,
+.workOptions-options {
+  width: 60%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.input-class {
+  padding: 2px;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.label-class {
+  color: #f9ac2c;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#skicka {
+  padding: 10px;
+  background-color: #f9ac2c;
+  border: none;
+  border-radius: 2px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#skicka:hover {
+  cursor: pointer;
+  background-color: #fc9d05;
+}
+
+[class^=" "].resolved 
+  .marker-options {
+    dragging: disable;
+  }

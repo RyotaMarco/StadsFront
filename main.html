@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stads</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-geosearch/dist/geosearch.umd.js"></script>
+  </head>
+  <body>
+    <main id="mapContainer">
+      <div id="map"></div>
+      <form id="list" class="list">
+        <div id="form" class="form">
+          <div class="formular" id="id">
+            <label for="Siffror" class="label-class" id="id-label" >ID: </label>
+            <input type="text" name="Siffror" class="input-class" id="id-input" readonly/>
+          </div>
+
+          <div class="formular" id="workOptions">
+            <label for="Typer av arbete" class="label-class" id="workOptions-label">Välj en typ av arbete:</label>
+            <select name="Typer av arbete" id="workOptions-input" onchange="selectedWork()">
+              <option value="påkörd stolpe" class="workOptions-options" id="collapsedPole">Påkörd stolpe</option>
+              <option value="Kabelfel" class="workOptions-options">Kabelfel</option>
+              <option value="Bookning" class="workOptions-options">Bookning</option>
+              <option value="inspektion" class="workOptions-options">Inspektion</option>
+              <option value="Trasiga lampa" class="workOptions-options">Trasiga lampa</option>
+            </select>
+          </div>
+
+          <div class="formular" id="comunClient">
+            <label for="Kommun" class="label-class" id="comunClient-label">Kundgemenskap: </label>
+            <input type="text" name="Kommun" class="input-class" id="comunClient-input"/>
+          </div>
+
+          <div class="formular" id="clientName">
+            <label for="Kundens namn: " class="label-class" id="clientName-label">Kundens namn:</label>
+            <input type="text" name="Kommun" class="input-class" id="clientName-input"/>
+          </div>
+
+          <div class="formular" id="observation">
+            <label for="Observationer" class="label-class" id="observation-label">Observationer:</label>
+            <textarea name="Observationer" id="observation-input" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="formular-button">
+            <button id="skicka" type="button" onclick="getFormInformation()">Skicka</button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
